@@ -2,8 +2,6 @@ import os
 import string
 import secrets
 
-banned_usernames = ['porn', 'sex', 'sexy', 'kiss', 'fuck', 'marijuanna', 'weed', 'drugs', 'cocaine', 'meth', 'methamphetamine', 'feet', 'babe', 'makeout']
-
 def display ():
     print ('Password Manager \n')
 
@@ -102,13 +100,9 @@ def search():
 def existing ():
     os.system ('clear')
     username = input ('Username: ')
-    if username != banned_usernames:
-        context = input ('Context: ')
-        password = input ('Password: ')
+    context = input ('Context: ')
+    password = input ('Password: ')
 
-    else:
-        os.system ('clear')
-        print ('Dear customer, your desired username is deemed inappropriate. Please replay the programme, and choose a more family-friendly surname. :)')
 
     save (username, context, password)
 
